@@ -74,3 +74,79 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Abhishek5514/enterprise-project-management-dashboard.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd enterprise-project-management-dashboard
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## Available Scripts
+
+```bash
+npm run dev
+```
+
+Starts the development server.
+
+```bash
+npm run build
+```
+
+Creates a production build.
+
+```bash
+npm run preview
+```
+
+Previews the production build locally.
+
+```bash
+npm run lint
+```
+
+Runs ESLint to check the code.
+
+## Data Persistence
+
+The application uses browser Local Storage to persist projects, tasks, team members, notifications, activities, and theme preferences.
+
+## Live Demo
+
+[View Live Project](https://abhishek5514.github.io/enterprise-project-management-dashboard/)
+
+## Repository
+
+[View GitHub Repository](https://github.com/Abhishek5514/enterprise-project-management-dashboard)
+
+## Future Improvements
+
+- Backend API Integration
+- User Authentication and Authorization
+- Database Integration
+- Real-time Collaboration
+- Role-based Access Control
+- Cloud Data Synchronization
+
+## Author
+
+Abhishek
+
+Frontend Developer
+
+## License
+
+This project is created for learning, portfolio, and demonstration purposes.
