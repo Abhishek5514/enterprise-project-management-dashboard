@@ -1,5 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NotFound from "./pages/NotFound";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
 import MainLayout from "./layouts/MainLayout";
 
 import Dashboard from "./pages/Dashboard";
@@ -9,14 +13,13 @@ import Team from "./pages/Team";
 import Analytics from "./pages/Analytics";
 import Settings from "./pages/Settings";
 import Profile from "./pages/Profile";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/enterprise-project-management-dashboard">
       <MainLayout>
         <Routes>
-          <Route path="*" element={<NotFound />} />
-          <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Dashboard />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/tasks" element={<Tasks />} />
@@ -24,6 +27,8 @@ function App() {
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/profile" element={<Profile />} />
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </MainLayout>
     </BrowserRouter>
