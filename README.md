@@ -73,4 +73,4 @@ Supports light and dark themes for an improved user experience.
 Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/Abhishek5514/enterprise-project-management-dashboard.git
