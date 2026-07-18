@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Sidebar from "../components/layout/Sidebar";
 import Navbar from "../components/layout/Navbar";
 
@@ -5,6 +7,16 @@ import { useApp } from "../context/AppContext";
 
 const MainLayout = ({ children }) => {
   const { theme } = useApp();
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const openSidebar = () => {
+    setIsSidebarOpen(true);
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
 
   return (
     <div
@@ -15,12 +27,15 @@ const MainLayout = ({ children }) => {
       }`}
     >
       {/* Sidebar */}
-      <Sidebar />
+      <Sidebar
+        isOpen={isSidebarOpen}
+        onClose={closeSidebar}
+      />
 
       {/* Main Content */}
       <div className="flex min-w-0 flex-1 flex-col">
         {/* Navbar */}
-        <Navbar />
+        <Navbar onMenuClick={openSidebar} />
 
         {/* Page Content */}
         <main
